@@ -18,6 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Logger">
+      <HintPath>bin\Debug\net6.0-windows\Logger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  
+
+  <ItemGroup>
     <Compile Update="frmHangHoaUpdate.cs">
       <SubType>Form</SubType>
     </Compile>

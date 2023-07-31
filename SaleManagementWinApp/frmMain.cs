@@ -69,5 +69,19 @@ namespace SaleManagementWinApp
             frmHH.MdiParent = this;
             frmHH.Show();
         }
+
+        private void qLNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.GetType() != typeof(frmNguoiDung))
+                {
+                    form.Close();
+                }
+            }
+            frmNguoiDung frmND = new frmNguoiDung();
+            frmND.MdiParent = this;
+            frmND.Show();
+        }
     }
 }

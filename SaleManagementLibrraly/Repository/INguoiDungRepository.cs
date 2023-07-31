@@ -10,5 +10,11 @@ namespace SaleManagementLibrraly.Repository
     public interface INguoiDungRepository
     {
         NguoiDung GetNguoiDungLogin(string TenDangNhap, string MatKhau);
+        IEnumerable<NguoiDung> GetNguoiDungs();
+        IEnumerable<NguoiDung> GetNguoiDungByKeyword(string keyword);
+        NguoiDung GetNguoiDungByTenDangNhap(string tenDangNhap);
+        void InsertNguoiDung(NguoiDung nguoiDung);
+        void UpdateNguoiDung(NguoiDung nguoiDung);
+        void DeleteNguoiDung(string tenDangNhap);
     }
 }

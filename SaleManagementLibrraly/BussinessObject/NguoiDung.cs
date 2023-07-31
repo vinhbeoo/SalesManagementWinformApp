@@ -10,5 +10,7 @@ namespace SaleManagementLibrraly.BussinessObject
     {
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
+        public int LoaiNguoiDung { get; set; }
+        public int? MaNguoiDung { get; set; }
     }
 }

@@ -145,5 +145,6 @@
         private TextBox txtMatKhau;
         private Label lblMatKhau;
         private Button btnThoat;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
