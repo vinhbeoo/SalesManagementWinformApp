@@ -33,16 +33,18 @@
             mnuThoat = new ToolStripMenuItem();
             mnuSanPham = new ToolStripMenuItem();
             mnuChao = new ToolStripMenuItem();
+            mnuDangXuat = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.FromArgb(255, 128, 255);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { tệpTinToolStripMenuItem, mnuSanPham, mnuChao });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(912, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -69,18 +71,27 @@
             // 
             // mnuChao
             // 
+            mnuChao.DropDownItems.AddRange(new ToolStripItem[] { mnuDangXuat });
             mnuChao.Name = "mnuChao";
             mnuChao.Size = new Size(57, 24);
             mnuChao.Text = "Chào";
+            // 
+            // mnuDangXuat
+            // 
+            mnuDangXuat.Name = "mnuDangXuat";
+            mnuDangXuat.Size = new Size(160, 26);
+            mnuDangXuat.Text = "Đăng xuất";
+            mnuDangXuat.Click += mnuDangXuat_Click;
             // 
             // frmMainKhachHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(912, 553);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmMainKhachHang";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMainKhachHang";
             Load += frmMainKhachHang_Load;
             menuStrip1.ResumeLayout(false);
@@ -96,5 +107,6 @@
         private ToolStripMenuItem mnuThoat;
         private ToolStripMenuItem mnuSanPham;
         private ToolStripMenuItem mnuChao;
+        private ToolStripMenuItem mnuDangXuat;
     }
 }

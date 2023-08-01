@@ -19,6 +19,12 @@ namespace SaleManagementWinApp
         public frmMainKhachHang()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
+            foreach (Form form in this.MdiChildren)
+            {
+                form.StartPosition = FormStartPosition.Manual;
+                form.Location = new Point(0, 0);
+            }
         }
 
         private void mnuThoat_Click(object sender, EventArgs e)
@@ -28,7 +34,10 @@ namespace SaleManagementWinApp
 
         private void mnuSanPham_Click(object sender, EventArgs e)
         {
-            frmSanPham f_SP = new frmSanPham();
+            frmSanPham f_SP = new frmSanPham()
+            {
+                Text = "Mua hàng"
+            };
             f_SP.MdiParent = this;
             f_SP.Show();
         }
@@ -36,6 +45,13 @@ namespace SaleManagementWinApp
         private void frmMainKhachHang_Load(object sender, EventArgs e)
         {
             mnuChao.Text = "Chào: " + khachHangRepository.GetKhachHangByID(Convert.ToInt32(NguoiDungInfo.MaNguoiDung)).TenKhach;
+        }
+
+        private void mnuDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmLogin f_Login = new frmLogin();
+            f_Login.Show();
         }
     }
 }
