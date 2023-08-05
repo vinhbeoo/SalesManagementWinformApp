@@ -56,6 +56,7 @@
             dgvCart.RowTemplate.Height = 29;
             dgvCart.Size = new Size(820, 188);
             dgvCart.TabIndex = 1;
+            dgvCart.CellContentClick += dgvCart_CellContentClick;
             // 
             // label1
             // 
